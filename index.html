@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Gussing Game</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <script src="./script.js" async></script>
+    <style>
+        body {
+            background: linear-gradient(217deg, rgba(255,0,0,.8), rgba(255,0,0,0) 70.71%),
+            linear-gradient(127deg, rgba(39, 41, 39, 0.8), rgba(191, 202, 191, 0) 70.71%),
+            linear-gradient(336deg, rgba(0,0,255,.8), rgba(0,0,255,0) 70.71%);
+            /* background: linear-gradient(to bottom, #333, #333 50%, rgb(245, 238, 238) 95%, #333 75%); */
+            /* background:linear-gradient(90deg, rgb(139, 75, 75), rgb(226, 207, 207)) ; */
+        }
+        .content {
+            padding-top:6rem ;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+        }
+        .guessField {
+            padding: 0.5rem;
+            /* border: none; */
+            box-shadow: 0.3rem 0.5rem 0.3rem;
+            background-color: rgb(180, 164, 164);
+            /* border-radius: 20%; */
+            
+        }
+        .guessSubmit {
+            padding: 0.4rem;
+
+            background-color: rgb(180, 164, 164);
+            box-shadow: 0.2rem 0.3rem 0.2rem;
+        }
+        label {
+            font-size: 1.4rem;
+        }
+        /* .lastResult {
+            box-shadow: 0.2rem 0.3rem 0.2rem;
+        } */
+        .para .p1 {
+            color: rgb(212, 199, 199);
+            font-size: 1.3rem;
+
+        }
+    </style>
+</head>
+
+<body>
+
+    
+    <div class="content">
+        <div>
+            <lottie-player src="https://assets10.lottiefiles.com/packages/lf20_iamb7tjt.json" background="transparent" speed="1"
+        style="width: 400px; height: 400px;" loop autoplay></lottie-player>
+        </div>
+        <div class="para">
+            <h1>Number guessing game</h1>
+            <p class="p1">We have selected a random number between 1 and 100. <br> See if you can guess it in 10 turns or fewer.
+                "Congratulations" <br> Else We'll tell you if your guess was too high or too low.</p>
+            
+            <div class="form">
+                <label for="guessField">Enter a guess: </label>
+                <input type="text" id="guessField" class="guessField">
+                <input type="submit" value="Submit guess" class="guessSubmit">
+            </div>
+            <div class="resultParas">
+                <p class="guesses"></p>
+                <p class="lastResult"></p>
+                <p class="lowOrHi"></p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
